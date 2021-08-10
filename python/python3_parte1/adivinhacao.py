@@ -38,6 +38,11 @@ print("Qual o nível de dificuldade?")
 print("(1) - Fácil (2) - Médio (3) - Difícil")
 nivel = input("Definir nível: ")
 
+limite_inferior     = 1
+limite_superior     = 100
+numero_secreto      = random.randint(limite_inferior,limite_superior)
+pontos = 1000
+
 if (nivel == "1"):
     print("Nível fácil")
     total_de_tentativas = 20
@@ -49,11 +54,6 @@ elif (nivel == "3"):
     total_de_tentativas = 5
 else:
     print("Nível inválido")
-
-limite_inferior     = 1
-limite_superior     = 100
-numero_secreto      = random.randint(limite_inferior,limite_superior)
-
 
 for rodadas in range(1,total_de_tentativas + 1):
     print("Tentativa {} de {}".format(rodadas,total_de_tentativas))
@@ -80,6 +80,7 @@ for rodadas in range(1,total_de_tentativas + 1):
         else:
             if (acertou):
                 print("Você acertou!")
+                print("Total de pontos:",pontos)
                 break
             else:
                 if (maior):
@@ -88,6 +89,8 @@ for rodadas in range(1,total_de_tentativas + 1):
                     print("Você errou! O chute foi menor do que o número secreto")
                 if(rodadas == total_de_tentativas):
                     print("Número secreto:",numero_secreto)
+                pontos_perdidos = abs(numero_secreto-chute)
+                pontos = pontos - pontos_perdidos
     except:
         print("Tipo de dado inválido")
     # rodadas = rodadas + 1
