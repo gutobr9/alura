@@ -37,8 +37,8 @@ def jogar():
                     print("Chute menor que número secreto!")
                 elif(chute > numero_secreto):
                     print("Chute maior que número secreto!")
-            print("numero secreto {} ".format(numero_secreto))
-            print("pontos: {} pts".format(pontos))
+            # print("numero secreto {} ".format(numero_secreto))
+            # print("pontos: {} pts".format(pontos))
         else:
             print("Fim de jogo!")
 
