@@ -1,5 +1,3 @@
-# List Comprehension
-
 # inteiros = [1,3,4,5,7,8,9]
 # pares = []
 # for numero in inteiros:
@@ -10,6 +8,7 @@
 
 # print("====================")
 
+# List Comprehension
 # pares = [i for i in inteiros if i % 2 == 0]
 # impares = [i for i in inteiros if i % 2 != 0]
 
@@ -23,8 +22,18 @@
 #     x = True
 # print(type(x))
 
-palavra = "teste"
+# palavra = "teste"
 
-t = ["_" for p in palavra]
+# t = ["_" for p in palavra]
 
-print(t)
+# print(t)
+
+# Leitura de arquivo
+# arquivo = open("palavras.txt","w")
+# limite = 11
+# for x in range(1,limite):
+#     if x == limite-1:
+#         arquivo.write("teste {}".format(x)) 
+#     else:
+#         arquivo.write("teste {} \n".format(x)) 
+# arquivo.close()
