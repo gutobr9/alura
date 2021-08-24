@@ -37,3 +37,18 @@
 #     else:
 #         arquivo.write("teste {} \n".format(x)) 
 # arquivo.close()
+
+# Leitura apenas da primeira linha
+# arquivo = open("palavras.txt","r")
+# linha = arquivo.readline()
+# print(linha)
+
+# Leitura de palavras a partir de arquivo e escolhe randomica de uma palavra
+# import random
+# palavras = []
+# arquivo = open("palavras.txt","r")
+# for linha in arquivo:
+#     palavras.append(linha.strip().upper())
+# palavra_posicao = random.randrange(0,len(palavras))
+# print(palavras)
+# print(palavras[palavra_posicao])
