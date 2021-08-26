@@ -1,19 +1,16 @@
 import random
 def jogar():
 
-    palavras = []
-
-    arquivo = open("palavras.txt","r")
-    for linha in arquivo:
-        palavras.append(linha.strip().upper())
+    imprimir_mensagem_abertura()
     
-    palavra_secreta = palavras[random.randrange(0,len(palavras))]
-    palavra_mascara = []
-    palavra_mascara = ["_" for letra in palavra_secreta]
+    palavra_secreta = gerar_palavra_secreta()
+    
+    palavra_mascara = inicializar_palavra_mascara(palavra_secreta)
+
     erros = 0
 
     while (("_" in palavra_mascara) and (erros < 6)):
-        chute = input("Digite (sair) para finalizar o jogo | Digite qual a letra? ").strip().upper()
+        chute = chutar()
         if(chute == "SAIR"):
             print("------------------")
             print("Você saiu do jogo!")
@@ -44,6 +41,27 @@ def jogar():
         else:
             print("Você perdeu!!")
         print("-------------")
+
+
+def imprimir_mensagem_abertura():
+    print("*********************************")
+    print("***Bem vindo ao jogo da Forca!***")
+    print("*********************************")
+
+def gerar_palavra_secreta():
+    arquivo = open("palavras.txt","r")
+    palavras = []
+    for linha in arquivo:
+        palavras.append(linha.strip().upper())
+    palavra_secreta = palavras[random.randrange(0,len(palavras))]
+    return palavra_secreta
+
+def inicializar_palavra_mascara(palavra_secreta):
+    return ["_" for letra in palavra_secreta]
+
+def chutar():
+    chute = input("Digite (sair) para finalizar o jogo | Digite qual a letra? ").strip().upper()
+    return chute
 
 if(__name__ == "__main__"):
     jogar()
