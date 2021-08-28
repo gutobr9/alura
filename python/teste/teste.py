@@ -126,6 +126,15 @@ class ContaCorrente:
         self.titular = titular
         self.saldo = saldo
         self.limite = limite
+    
+    def extrato(self):
+        print("Saldo R$ {} do titular {}".format(self.saldo,self.titular))
+
+    def deposita(self,valor):
+        self.saldo +=valor
+
+    def saca(self,valor):
+        self.saldo -=valor
 
 conta_01 = ContaCorrente()
 conta_02 = ContaCorrente(79,"Guto",23000,5000)
@@ -141,3 +150,10 @@ print(conta_02.numero)
 print(conta_02.titular)
 print(conta_02.saldo)
 print(conta_02.limite)
+
+print("Extrato:")
+conta_02.extrato()
+conta_02.deposita(500)
+conta_02.extrato()
+conta_02.saca(1000)
+conta_02.extrato()
