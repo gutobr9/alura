@@ -1,0 +1,59 @@
+[33mcommit 0cf55300ab5480a4e0fa808f1687add442660d67[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Gustavo B Rodrigues <gustavo.bezerrarodrigues@gmail.com>
+Date:   Mon Aug 30 21:17:19 2021 -0300
+
+    teste vs code
+
+[33mcommit dc5c677fe8230555cfae0707376ff7406b9d94a1[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Gustavo B Rodrigues <gustavo.bezerrarodrigues@gmail.com>
+Date:   Sat Aug 28 02:02:38 2021 -0300
+
+    criação da class data com função formatting
+
+[33mcommit ff13429bfa1f9d703074954cb3c6811a7215ba1b[m
+Author: Gustavo B Rodrigues <gustavo.bezerrarodrigues@gmail.com>
+Date:   Thu Aug 26 01:47:52 2021 -0300
+
+    introdução OO
+
+[33mcommit 65b5c3621c56de734b3e2a3cfe0c6b6b75090277[m
+Author: Gustavo B Rodrigues <gustavo.bezerrarodrigues@gmail.com>
+Date:   Tue Aug 24 08:13:14 2021 -0300
+
+    finalizacao do jogo da forca, mas precisa de refinamento no codigo
+
+[33mcommit 0fb64f5d2d6df17a57d3bf3d511622086618dd66[m
+Author: Gustavo B Rodrigues <gustavo.bezerrarodrigues@gmail.com>
+Date:   Mon Aug 23 08:20:22 2021 -0300
+
+    aprendendo manipulação de arquivos
+
+[33mcommit 8534dce7a05ca2047ee690387999bf8b6af827e4[m
+Author: Gustavo B Rodrigues <gustavo.bezerrarodrigues@gmail.com>
+Date:   Sat Aug 21 17:53:56 2021 -0300
+
+    criacao da pasta 'teste' e melhorias no jogo da forca na pasta teste
+
+[33mcommit ef28accc71298c8e37a47eaf51d24627cec40d6d[m
+Author: Gustavo B Rodrigues <gustavo.bezerrarodrigues@gmail.com>
+Date:   Thu Aug 19 16:01:19 2021 -0300
+
+    jogos/adivinhacao feitos por conta propria, faltando a forca
+
+[33mcommit 9d878fa702aa8d36da344889259491e7a442d42e[m
+Author: Gustavo B Rodrigues <gustavo.bezerrarodrigues@gmail.com>
+Date:   Tue Aug 10 02:29:01 2021 -0300
+
+    arquivo arredondamento
+
+[33mcommit e9f92e1db6aa206844dc5776a8b954d16dee6a71[m
+Author: Gustavo B Rodrigues <gustavo.bezerrarodrigues@gmail.com>
+Date:   Tue Aug 10 01:13:31 2021 -0300
+
+    Adição de pastas e arquivo adivinhação.py
+
+[33mcommit 6435e63380e2206f9111b34d305f25728a3fda8b[m
+Author: Gustavo Bezerra Rodrigues <gustavo.bezerrarodrigues@gmail.com>
+Date:   Tue Aug 10 00:48:03 2021 -0300
+
+    Initial commit
