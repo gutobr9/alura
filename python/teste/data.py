@@ -9,3 +9,6 @@ class Data:
 
 data = Data(10,1,21)
 data.formatting()
+
+# 17952
+# 4200

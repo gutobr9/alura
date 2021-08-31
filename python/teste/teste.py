@@ -119,41 +119,89 @@
 # conta2 = ContaCorrente()
 # print(conta2)
 
+class Conta:
+    def __init__(self,numero,titular,saldo=0,limite=100):
+        self.__numero = numero
+        self.__titular = titular
+        self.__saldo = saldo
+        self.__limite = limite
 
-class ContaCorrente:
-    def __init__(self,numero=789465,titular="Gustavo",saldo=-4000,limite=5000):
-        self.numero = numero
-        self.titular = titular
-        self.saldo = saldo
-        self.limite = limite
-    
+    def __pode_sacar(self,valor_a_sacar):
+        valor_disponivel_a_sacar = (self.__saldo + self.__limite)
+        return valor_a_sacar <= valor_disponivel_a_sacar
+
+    def sacar(self,valor):
+        if(self.__pode_sacar(valor)):
+            self.__saldo -= valor
+        else:
+            print("O valor {} passou do limite".format(valor))
+
+    def depositar(self,valor):
+        self.__saldo += valor
+
+    @property
     def extrato(self):
-        print("Saldo R$ {} do titular {}".format(self.saldo,self.titular))
+        print("===================================")
+        print("Titular {}".format(self.__titular))
+        print("Valor do saldo R$ {}".format(self.__saldo))
+        print("Limite R$ {}".format(self.__limite))
+        print("===================================")
 
-    def deposita(self,valor):
-        self.saldo +=valor
+    def transferir(self,valor,destino):
+        self.saca(valor)
+        destino.depositar(valor)
+    
+    @property
+    def saldo(self):
+        return self.__saldo
 
-    def saca(self,valor):
-        self.saldo -=valor
+    @property
+    def titular(self):
+        return self.__titular
 
-conta_01 = ContaCorrente()
-conta_02 = ContaCorrente(79,"Guto",23000,5000)
+    @property
+    def limite(self):
+        return self.__limite
 
-print(conta_01)
-print(conta_01.numero)
-print(conta_01.titular)
-print(conta_01.saldo)
-print(conta_01.limite)
-print("================")
-print(conta_02)
-print(conta_02.numero)
-print(conta_02.titular)
-print(conta_02.saldo)
-print(conta_02.limite)
+    @limite.setter
+    def limite(self,limite):
+        self.__limite = limite
 
-print("Extrato:")
-conta_02.extrato()
-conta_02.deposita(500)
-conta_02.extrato()
-conta_02.saca(1000)
-conta_02.extrato()
+    @staticmethod
+    def codigo_banco():
+        return "001"
+
+    @staticmethod
+    def codigos_bancos():
+        return {'BB':'001', 'Caixa':'104', 'Bradesco':'237'}
+
+conta = Conta(123,"Gustavo")
+conta.extrato
+conta.sacar(100)
+conta.extrato
+
+# conta2 = Conta(321,"Blenda")
+# conta.depositar(50)
+# conta.extrato()
+# conta.transferir(0,conta2)
+# conta.extrato()
+# conta2.extrato()
+
+# class Carro:
+#     def __init__(self,modelo,marca):
+#         self.__modelo = modelo
+#         self.__marca = marca
+#         self.__status = False
+#     def ligar(self):
+#         self.__status = True
+#     def desligar(self):
+#         self.__status = False
+#     def detalhes(self):
+#         print("Modelo: {} Marca:{} Status:{}".format(self.__modelo,self.__marca,self.__status))
+
+# carro = Carro("gol","VW")
+# carro.modelo = "up"
+# carro.ligar()
+# carro.status = False
+# carro._Carro__status = False
+# carro.detalhes()
