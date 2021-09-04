@@ -50,9 +50,11 @@ class Serie:
     @nome.setter
     def nome(self,nome):
         self.__nome = nome
+    
     @ano.setter
     def ano(self,ano):
         self.__ano = ano
+    
     @temporadas.setter
     def temporadas(self,temporadas):
         self.__temporadas = temporadas

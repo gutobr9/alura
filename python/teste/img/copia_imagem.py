@@ -5,3 +5,4 @@
 # copy = open("paisagem2.jpg","wb")
 # copy.write(data)
 # copy.close()
+
