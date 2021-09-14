@@ -119,66 +119,66 @@
 # conta2 = ContaCorrente()
 # print(conta2)
 
-class Conta:
-    def __init__(self,numero,titular,saldo=0,limite=100):
-        self.__numero = numero
-        self.__titular = titular
-        self.__saldo = saldo
-        self.__limite = limite
+# class Conta:
+#     def __init__(self,numero,titular,saldo=0,limite=100):
+#         self.__numero = numero
+#         self.__titular = titular
+#         self.__saldo = saldo
+#         self.__limite = limite
 
-    def __pode_sacar(self,valor_a_sacar):
-        valor_disponivel_a_sacar = (self.__saldo + self.__limite)
-        return valor_a_sacar <= valor_disponivel_a_sacar
+#     def __pode_sacar(self,valor_a_sacar):
+#         valor_disponivel_a_sacar = (self.__saldo + self.__limite)
+#         return valor_a_sacar <= valor_disponivel_a_sacar
 
-    def sacar(self,valor):
-        if(self.__pode_sacar(valor)):
-            self.__saldo -= valor
-        else:
-            print("O valor {} passou do limite".format(valor))
+#     def sacar(self,valor):
+#         if(self.__pode_sacar(valor)):
+#             self.__saldo -= valor
+#         else:
+#             print("O valor {} passou do limite".format(valor))
 
-    def depositar(self,valor):
-        self.__saldo += valor
+#     def depositar(self,valor):
+#         self.__saldo += valor
 
-    @property
-    def extrato(self):
-        print("===================================")
-        print("Titular {}".format(self.__titular))
-        print("Valor do saldo R$ {}".format(self.__saldo))
-        print("Limite R$ {}".format(self.__limite))
-        print("===================================")
+#     @property
+#     def extrato(self):
+#         print("===================================")
+#         print("Titular {}".format(self.__titular))
+#         print("Valor do saldo R$ {}".format(self.__saldo))
+#         print("Limite R$ {}".format(self.__limite))
+#         print("===================================")
 
-    def transferir(self,valor,destino):
-        self.saca(valor)
-        destino.depositar(valor)
+#     def transferir(self,valor,destino):
+#         self.saca(valor)
+#         destino.depositar(valor)
     
-    @property
-    def saldo(self):
-        return self.__saldo
+#     @property
+#     def saldo(self):
+#         return self.__saldo
 
-    @property
-    def titular(self):
-        return self.__titular
+#     @property
+#     def titular(self):
+#         return self.__titular
 
-    @property
-    def limite(self):
-        return self.__limite
+#     @property
+#     def limite(self):
+#         return self.__limite
 
-    @limite.setter
-    def limite(self,limite):
-        self.__limite = limite
+#     @limite.setter
+#     def limite(self,limite):
+#         self.__limite = limite
 
-    @staticmethod
-    def codigo_banco():
-        return "001"
+#     @staticmethod
+#     def codigo_banco():
+#         return "001"
 
-    @staticmethod
-    def codigos_bancos():
-        return {'BB':'001', 'Caixa':'104', 'Bradesco':'237'}
+#     @staticmethod
+#     def codigos_bancos():
+#         return {'BB':'001', 'Caixa':'104', 'Bradesco':'237'}
 
-conta = Conta(123,"Gustavo")
-conta.extrato
-conta.sacar(100)
-conta.extrato
+# conta = Conta(123,"Gustavo")
+# conta.extrato
+# conta.sacar(100)
+# conta.extrato
 
 # conta2 = Conta(321,"Blenda")
 # conta.depositar(50)
@@ -205,3 +205,56 @@ conta.extrato
 # carro.status = False
 # carro._Carro__status = False
 # carro.detalhes()
+
+# class Computador:
+#     def __init__(self):
+#         self.__status = False
+
+#     def power(self):
+#         self.__status = True
+#         return self.__status
+    
+#     def shot_down(self):
+#         self.__status = False
+#         return self.__status
+
+# cp = Computador()
+# print(cp)
+# print(cp.power())
+# print(cp.shot_down())
+
+# class Device:
+#     status = False
+    
+#     @classmethod
+#     def power(cls):
+#         cls.status = False
+#         return cls.status
+
+#     @staticmethod
+#     def shot_down():
+#         status = True
+#         return status
+
+# class Computador(Device):
+#     pass
+
+# comp = Computador()
+
+# print("============ status ============")
+# # print(comp.status())
+# # print(Device.status())
+# print("============ direto ============")
+# print(comp.power())
+# print(comp.shot_down())
+# print("================================")
+# print(Device.power())
+# print(Device.shot_down())
+# print("========= __class__ ===========")
+# print(comp.__class__.power())
+# print(comp.__class__.shot_down())
+# print("================================")
+# print(Device.__class__.power())
+# print(Device.__class__.shot_down())
+
+

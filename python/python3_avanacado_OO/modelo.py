@@ -3,6 +3,10 @@ class Filme:
         self.__nome = nome
         self.__ano = ano
         self.__duracao = duracao
+        self.likes = 0
+
+    def dar_like(self):
+        self.likes += 1
 
     @property
     def nome(self):
@@ -64,7 +68,12 @@ avengers = Filme("Avengers",2018,240)
 # print(avengers.nome)
 # avengers.nome = "vingadores"
 # print(avengers.nome)
-print(f"Filme: {avengers.nome} ano {avengers.ano} temporadas {avengers.duracao} minutos")
+print(f"Filme: {avengers.nome} ano {avengers.ano} temporadas {avengers.duracao} minutos. Quantidade de likes {avengers.likes}")
+avengers.dar_like()
+avengers.dar_like()
+avengers.dar_like()
+avengers.dar_like()
+print(f"Filme: {avengers.nome} ano {avengers.ano} temporadas {avengers.duracao} minutos. Quantidade de likes {avengers.likes}")
 print("")
 icarly = Serie("iCarly",2014,8)
 # print("Série: {} ano {} temporadas {}".format(icarly.nome,icarly.ano,icarly.temporadas))
